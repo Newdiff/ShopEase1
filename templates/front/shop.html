@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Your E-Commerce Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Store.css') }}">
+    <script src="{{ url_for('static', filename='shop.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</head>
+<body>
+    <!-- Header (same as your other pages) -->
+    <header>
+        <div class="container header-container">
+            <a href="{{ url_for('home') }}" class="logo">Shop<span>Ease</span></a>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li>
+                        <a href="{{ url_for('cart') }}" class="cart-icon">
+                            🛒
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slideshow Background -->
+<section class="hero">
+    <div class="slideshow">
+        <div class="slide active" style="background-image: url('{{ url_for('static', filename='slider/1.jpg') }}');"></div>
+        <div class="slide" style="background-image: url('{{ url_for('static', filename='slider/2.jpg') }}');"></div>
+        <div class="slide" style="background-image: url('{{ url_for('static', filename='slider/3.jpg') }}');"></div>
+    </div>
+    <div class="hero-content container">
+        <h1>Welcome to ShopEase</h1>
+        <p>Discover amazing products at unbeatable prices. Shop now and enjoy fast delivery right to your doorstep.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</section>
+   <!-- Shop Page Content -->
+    <main class="shop-page">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+
+            <!-- Electronics Category Section -->
+            <section class="category-section">
+                <div class="category-header">
+                    <h2 class="category-title">Electronics</h2>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Electronic/headphone.webp') }}" alt="Wireless Headphones">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Headphones</h3>
+                            <div class="product-price">
+                                <span class="current-price">$89.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Electronic/Smart watch.png') }}" alt="Smart Watch">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Smart Watch</h3>
+                            <div class="product-price">
+                                <span class="current-price">$149.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Electronic/Bluetoo Speaker.jpg') }}" alt="Bluetooth Speaker">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Bluetooth Speaker</h3>
+                            <div class="product-price">
+                                <span class="current-price">$59.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Electronic/Air pords.jpg') }}" alt="Air Pod">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Air Pods</h3>
+                            <div class="product-price">
+                                <span class="current-price">$79.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fashion Category Section -->
+            <section class="category-section">
+                <div class="category-header">
+                    <h2 class="category-title">Fashion</h2>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Fashion/men shirt.png') }}" alt="Men's Shirt">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Men's Casual Shirt</h3>
+                            <div class="product-price">
+                                <span class="current-price">$29.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Fashion/womenshirt.webp') }}" alt="Women's Dress">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Women's Summer Dress</h3>
+                            <div class="product-price">
+                                <span class="current-price">$39.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Fashion/men-jeans.jpg') }}" alt="Jeans">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Slim Fit Jeans</h3>
+                            <div class="product-price">
+                                <span class="current-price">$49.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Fashion/running_shoes.png') }}" alt="Sneakers">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Running Sneakers</h3>
+                            <div class="product-price">
+                                <span class="current-price">$59.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Garden Category Section -->
+            <section class="category-section">
+                <div class="category-header">
+                    <h2 class="category-title">Garden</h2>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Garden/Chair.jpg') }}" alt="Garden Chair">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Patio Chair Set</h3>
+                            <div class="product-price">
+                                <span class="current-price">$129.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Garden/tools.webp') }}" alt="Gardening Tools">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Gardening Tool Set</h3>
+                            <div class="product-price">
+                                <span class="current-price">$39.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Garden/Plant.jpg') }}" alt="Planter">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Plant</h3>
+                            <div class="product-price">
+                                <span class="current-price">$24.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Garden/bbq.webp') }}" alt="BBQ Grill">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Portable BBQ Grill</h3>
+                            <div class="product-price">
+                                <span class="current-price">$89.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sports & Outdoors Category Section -->
+            <section class="category-section">
+                <div class="category-header">
+                    <h2 class="category-title">Sports & Outdoors</h2>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Sport/camping.png') }}" alt="Camping Tent">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">2-Person Camping Tent</h3>
+                            <div class="product-price">
+                                <span class="current-price">$99.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Sport/bike.png') }}" alt="Mountain Bike">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Mountain Bike</h3>
+                            <div class="product-price">
+                                <span class="current-price">$299.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Sport/yoga mat.png') }}" alt="Yoga Mat">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Premium Yoga Mat</h3>
+                            <div class="product-price">
+                                <span class="current-price">$29.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ url_for('static', filename='image/Sport/dumbbell.png') }}" alt="Dumbbell Set">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Adjustable Dumbbell Set</h3>
+                            <div class="product-price">
+                                <span class="current-price">$79.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p>Get your products delivered within 2-3 business days with our express shipping option.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3 class="feature-title">Quality Products</h3>
+                    <p>We source only the highest quality products from trusted manufacturers and suppliers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Secure Payment</h3>
+                    <p>Your transactions are 100% secure with our encrypted payment processing system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>ShopEase</h3>
+                    <p>Your one-stop shop for all your needs. We offer quality products at affordable prices with excellent customer service.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new products and special offers.</p>
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

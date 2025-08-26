@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your Online Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Store.css') }}">
+    <script src="{{ url_for('static', filename='shop.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="home.html" class="logo">Shop<span>Ease</span></a>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                   <li>
+                        <a href="{{ url_for('cart') }}" class="cart-icon">
+                            🛒
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Hero Section with Slideshow Background -->
+<section class="hero">
+    <div class="slideshow">
+        <div class="slide active" style="background-image: url('{{ url_for('static', filename='slider/1.jpg') }}');"></div>
+        <div class="slide" style="background-image: url('{{ url_for('static', filename='slider/2.jpg') }}');"></div>
+        <div class="slide" style="background-image: url('{{ url_for('static', filename='slider/3.jpg') }}');"></div>
+    </div>
+    <div class="hero-content container">
+        <h1>Welcome to ShopEase</h1>
+        <p>Discover amazing products at unbeatable prices. Shop now and enjoy fast delivery right to your doorstep.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</section>
+
+   <!-- Categories Section -->
+<section class="categories">
+    <div class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+            <!-- Category 1 -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="{{ url_for('static', filename='image/Electronics.png') }}" alt="Electronics">
+                    <div class="item-count">4 items</div>
+                </div>
+                <div class="category-info">
+                    <h3 class="category-title">Electronics</h3>
+                    <a href="{{ url_for('shop') }}" class="btn browse-btn">Browse</a>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="{{ url_for('static', filename='image/fashion.png') }}" alt="Fashion">
+                    <div class="item-count">4 items</div>
+                </div>
+                <div class="category-info">
+                    <h3 class="category-title">Fashion</h3>
+                    <a href="{{ url_for('shop') }}" class="btn browse-btn">Browse</a>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="{{ url_for('static', filename='image/garden.png') }}" alt="Garden">
+                    <div class="item-count">4 items</div>
+                </div>
+                <div class="category-info">
+                    <h3 class="category-title">Garden</h3>
+                    <a href="{{ url_for('shop') }}" class="btn browse-btn">Browse</a>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="{{ url_for('static', filename='image/sport.png') }}" alt="Sports">
+                    <div class="item-count">4 items</div>
+                </div>
+                <div class="category-info">
+                    <h3 class="category-title">Sports & Outdoors</h3>
+                    <a href="{{ url_for('shop') }}" class="btn browse-btn">Browse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p>Get your products delivered within 2-3 business days with our express shipping option.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3 class="feature-title">Quality Products</h3>
+                    <p>We source only the highest quality products from trusted manufacturers and suppliers.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Secure Payment</h3>
+                    <p>Your transactions are 100% secure with our encrypted payment processing system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>ShopEase</h3>
+                    <p>Your one-stop shop for all your needs. We offer quality products at affordable prices with excellent customer service.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new products and special offers.</p>
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

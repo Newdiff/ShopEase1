@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ShopEase</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Store.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='shop.js') }}"></script>
+</head>
+<body>
+    <!-- Header (consistent with other pages) -->
+    <header>
+        <div class="container header-container">
+            <a href="{{ url_for('home') }}" class="logo">Shop<span>Ease</span></a>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li>
+                        <a href="{{ url_for('cart') }}" class="cart-icon">
+                            🛒
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Page Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Discover the journey behind ShopEase and the values that drive us</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <main class="about-content">
+        <div class="container">
+            <!-- Our Story Section -->
+            <section class="about-section">
+        <div class="about-text">
+        <h2>Meet Our Team</h2>
+        <p>We're a diverse group of professionals united by our passion for creating the best shopping experience for our customers.</p>
+    </div>
+    <div class="team-members-side-by-side">
+        <div class="team-member-pair">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='image/about/Phim _Chivorn.jpg') }}" alt="Phim Chivorn">
+                <div class="team-info">
+                    <h4>Phim Chivorn</h4>
+                    <p>Programmer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='image/about/Meng_Lyhour.jpg') }}" alt="Meng Lyhour">
+                <div class="team-info">
+                    <h4>Meng Lyhour</h4>
+                    <p>Programmer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='image/about/Oul_Rangsey.jpg') }}" alt="Oul Rangsey">
+                <div class="team-info">
+                    <h4>Oul Rangsey</h4>
+                    <p>Marketing Manager</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='image/about/Kheav _Sarath.jpg') }}" alt="Kheav Sarath">
+                <div class="team-info">
+                    <h4>Kheav Sarath</h4>
+                    <p>Web Designer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='image/about/Touch_Sitipol.jpg') }}" alt="Touch Sitipol">
+                <div class="team-info">
+                    <h4>Touch Sitipol</h4>
+                    <p>Web Designer</p>
+                </div>
+             </div>
+            </div>
+        </div>
+
+</section>
+
+            <!-- Mission Section -->
+            <section class="about-section reverse">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>At ShopEase, we believe shopping should be simple, secure, and satisfying. We're committed to:</p>
+                    <ul class="mission-list">
+                        <li>Providing high-quality products at competitive prices</li>
+                        <li>Delivering exceptional customer experiences</li>
+                        <li>Ensuring fast and reliable shipping</li>
+                        <li>Maintaining transparent and honest business practices</li>
+                        <li>Continuously improving our platform based on customer feedback</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- Values Section -->
+            <section class="values-section">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">💎</div>
+                        <h3>Quality</h3>
+                        <p>We carefully select every product to ensure it meets our high standards.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Integrity</h3>
+                        <p>We believe in honest pricing, transparent policies, and ethical business.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h3>Innovation</h3>
+                        <p>We continuously improve our platform to enhance your shopping experience.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">❤️</div>
+                        <h3>Customer Focus</h3>
+                        <p>Your satisfaction is our top priority in every decision we make.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (consistent with other pages) -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>ShopEase</h3>
+                    <p>Your one-stop shop for all your needs. We offer quality products at affordable prices with excellent customer service.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates and special offers</p>
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
